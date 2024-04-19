@@ -2,27 +2,30 @@
     font-family: 'Montserrat-Medium';
     src: url('assets/fonts/Montserrat-Medium.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('assets/fonts/Montserrat-ExtraBold.ttf');
+}
 
 *{
     font-family: 'Montserrat-Medium';
-}
-header{
-    background-color: black;
 }
 .cabecalho{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
+    padding-top: 35px;
 }
 .menu{
     margin: 0px;
     display: flex;
     align-items: center;
+
 }
 header .menu > ul{
     list-style: none;
     padding: 0%;
-    margin-right: 50px;
+    margin-right: 30px;
     text-align:end;
 }
 .submenu ul{
@@ -37,7 +40,7 @@ header ul li{
 header ul li a{
     display: block;
     padding: 0;
-    margin: 10px 30px;
+    margin: 0px 30px;
     text-decoration: none;
     color: white;
 }
@@ -45,30 +48,34 @@ header ul li a{
     content: "";
     position: absolute;
     left: 15%;
-    bottom: 4px;
+    bottom: -4px;
     width: 0;
     height: 4px;
     background-color: #0068ff;
     transition: width 0.3s ease;
 }
-.menu a:hover::after{
+header a:hover::after  {
     width: 70%;
+}
+.dropdown:hover > a,
+.dropdown:hover .cls-1{
+    color: #0068ff;
+    stroke: #0068ff;
 }
 header .dropdown .submenu{
     display: none;
     position: absolute;
-    background-color: rgb(0, 0, 0);
-    border: 1px solid #fff;
-    padding: 10px 0px;
-    margin: 0;
+    padding: 0px 10px;
+    margin: 0px;
 }
 header .dropdown:hover .submenu{
     display: block;
 }
 header .submenu a{
     display: block;
-    padding: 0px 20px;
-    color: white;
+    padding: 20px 25px 0px;
+    margin: 0px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: left;
 }
@@ -77,6 +84,41 @@ header .dropdown svg {
     margin-left: 0px;
 }
 .logo svg{
-    margin:15% 0% 0% 15%;
-    padding-left: 15%;
+    margin:10% 0% 0% 40%;
+    
+}
+.info h2{
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 300%;
+    color: #0068ff;
+    margin:3% 0%
+
+}
+.info span{
+    font-family: 'Montserrat-ExtraBold';
+}
+.info p{
+    line-height: 140%;
+    font-size: 147%;
+    color: #fff;
+}
+.info {
+    text-align: justify;
+    margin: 12% 7% 0% 2%;
+    padding: 0%;
+    
+}
+.about {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.image svg{
+    padding: 0%;
+    margin: 40% 0px 0px 30%;
+}
+body{
+    background-image: url('./assets/background.svg');
+    background-position: center top;
+    background-size: 100%;
 }
