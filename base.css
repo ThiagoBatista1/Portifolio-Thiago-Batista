@@ -43,6 +43,10 @@ header ul li a{
     margin: 0px 30px;
     text-decoration: none;
     color: white;
+    transition: transform 0.2s;
+}
+header ul li a:hover{
+    font-weight: bold;
 }
 .menu a::after{
     content: "";
@@ -87,6 +91,11 @@ header .dropdown svg {
     margin:10% 0% 0% 40%;
     
 }
+.logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 .info h2{
     font-family: 'Montserrat-ExtraBold';
     font-size: 300%;
