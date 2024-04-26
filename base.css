@@ -88,12 +88,8 @@ header .dropdown svg {
     margin-left: 0px;
 }
 .logo svg{
+    padding: 0%;
     margin:10% 0% 0% 40%;
-    
-}
-.logo:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
 }
 
 .info h2{
@@ -117,7 +113,7 @@ header .dropdown svg {
     padding: 0%;
     
 }
-.about {
+.sobre {
     display: flex;
     flex-direction: row;
     gap: 10%;
@@ -125,6 +121,10 @@ header .dropdown svg {
 .image svg{
     padding: 0%;
     margin: 40% 0px 0px 30%;
+}
+.image svg:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 body{
     background-image: url('./assets/background.svg');
