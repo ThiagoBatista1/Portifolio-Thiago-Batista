@@ -10,11 +10,13 @@
 *{
     font-family: 'Montserrat-Medium';
 }
+
 .cabecalho{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
     padding-top: 35px;
+    color: black;
 }
 .menu{
     margin: 0px;
@@ -126,7 +128,7 @@ header .dropdown svg {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
-body{
+ body{
     background-image: url('./assets/background.svg');
     background-position: center top;
     background-size: 100%;
