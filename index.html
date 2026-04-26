@@ -7,6 +7,11 @@
     <meta name="author" content="Thiago Batista">
     <title>Portifólio</title>
     <link rel="stylesheet" target="_blank" href="base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -100,27 +105,31 @@
     </header>
     <main>
         <section class="inicio">
-            <h1>Lorem Ipsum dolor sit amet consectetur</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dignissimos pariatur ipsa, id
-                voluptates officiis tempore natus atque dolores quis animi numquam doloremque odio voluptatum
-                praesentium.</p>
-            <div class="botões">
-                <button class="primary">Fale Comigo<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
-                            fill="#5C6470" />
-                    </svg>
-                </button>
-                <button class="secundary">Trabalhos<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
-                            fill="#5C6470" />
-                    </svg>
-                </button>
+            <div class="container">
+                <div class="texto">
+                    <h1>Lorem <span class="destaque">Ipsum dolor</span> sit amet consectetur</h1>
+                    <p class="fundo-escuro">Lorem ipsum dolor sit amet consectetur. Mauris quis amet arcu aliquam id
+                        amet a consectetur. Vel diam imperdiet egestas elementum vel nisl in habitant. </p>
+                </div>
+                <div class="botoes">
+                    <button class="primary">Fale Comigo<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button class="secundary">Trabalhos<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
+                                fill="#5C6470" />
+                        </svg>
+                    </button>
 
+                </div>
             </div>
+
         </section>
         <section class="sobre">
             <figure class="image">
@@ -438,8 +447,8 @@
                                 fill="white" />
                         </svg>
                     </a></li>
-                <li><a target="_blank" href="mailto:batistathiago409@gmail.com?subject=Contato pelo portfólio"><svg width="24" height="19"
-                            viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <li><a target="_blank" href="mailto:batistathiago409@gmail.com?subject=Contato pelo portfólio"><svg
+                            width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21.6 0H2.4C1.08 0 0.012 1.06875 0.012 2.375L0 16.625C0 17.9313 1.08 19 2.4 19H21.6C22.92 19 24 17.9313 24 16.625V2.375C24 1.06875 22.92 0 21.6 0ZM21.12 5.04688L12.636 10.2956C12.252 10.5331 11.748 10.5331 11.364 10.2956L2.88 5.04688C2.75967 4.98003 2.6543 4.88972 2.57027 4.78141C2.48623 4.67311 2.42527 4.54905 2.39109 4.41675C2.35691 4.28446 2.3502 4.14667 2.37139 4.01174C2.39257 3.87681 2.4412 3.74753 2.51434 3.63173C2.58747 3.51594 2.68359 3.41603 2.79687 3.33806C2.91015 3.26008 3.03825 3.20567 3.17339 3.1781C3.30854 3.15054 3.44794 3.1504 3.58315 3.17769C3.71835 3.20498 3.84656 3.25913 3.96 3.33687L12 8.3125L20.04 3.33687C20.1534 3.25913 20.2816 3.20498 20.4169 3.17769C20.5521 3.1504 20.6915 3.15054 20.8266 3.1781C20.9618 3.20567 21.0898 3.26008 21.2031 3.33806C21.3164 3.41603 21.4125 3.51594 21.4857 3.63173C21.5588 3.74753 21.6074 3.87681 21.6286 4.01174C21.6498 4.14667 21.6431 4.28446 21.6089 4.41675C21.5747 4.54905 21.5138 4.67311 21.4297 4.78141C21.3457 4.88972 21.2403 4.98003 21.12 5.04688Z"
                                 fill="white" />
@@ -457,8 +466,11 @@
         <nav class="redesSociais">
             <ul>
                 <li><a target="_blank" href="https://github.com/ThiagoBatista1">ThiagoBatista1</a></li>
-                <li><a targhet="_blank" href="mailto:batistathiago409@gmail.com?subject=Contato pelo portfólio">batistathiago409@gmail.com</a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/thiago-batista-pacheco/">Thiago Batista Pacheco</a></li>
+                <li><a targhet="_blank"
+                        href="mailto:batistathiago409@gmail.com?subject=Contato pelo portfólio">batistathiago409@gmail.com</a>
+                </li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/thiago-batista-pacheco/">Thiago Batista
+                        Pacheco</a></li>
             </ul>
         </nav>
     </footer>
