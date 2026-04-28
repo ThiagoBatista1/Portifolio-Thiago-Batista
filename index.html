@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header style="background:black;">
+    <header>
         <section class="header">
             <figure class="logo">
                 <svg width="115" height="48" viewBox="0 0 115 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,21 +75,21 @@
                     </defs>
                 </svg>
             </figure>
-            <nav class="menu">
-                <ul>
-                    <li><a target="_self" href="#">
+            <nav>
+                <ul class="menu">
+                    <li class="item"><a target="_self" href="#">
                             <p>Início</p>
                         </a></li>
-                    <li><a target="_self" href="#">
+                    <li class="item"><a target="_self" href="#">
                             <p>Sobre Mim</p>
                         </a></li>
-                    <li><a target="_self" href="#">
+                    <li class="item"><a target="_self" href="#">
                             <p>Skills</p>
                         </a></li>
-                    <li><a target="_blank" href="#">
+                    <li class="item"><a target="_blank" href="#">
                             <p>Design Gráfico</p>
                         </a></li>
-                    <li><a target="_blank" href="#">
+                    <li class="item"><a target="_blank" href="#">
                             <p>UX/UI</p>
                         </a></li>
                 </ul>
@@ -98,7 +98,7 @@
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
-                        fill="#5C6470" />
+                        fill="currentColor" />
                 </svg>
             </button>
         </section>
@@ -108,7 +108,7 @@
             <div class="container">
                 <div class="texto">
                     <h1>Lorem <span class="destaque">Ipsum dolor</span> sit amet consectetur</h1>
-                    <p class="fundo-escuro">Lorem ipsum dolor sit amet consectetur. Mauris quis amet arcu aliquam id
+                    <p class="p-fundo-escuro">Lorem ipsum dolor sit amet consectetur. Mauris quis amet arcu aliquam id
                         amet a consectetur. Vel diam imperdiet egestas elementum vel nisl in habitant. </p>
                 </div>
                 <div class="botoes">
@@ -123,7 +123,7 @@
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
-                                fill="#5C6470" />
+                                fill="currentColor" />
                         </svg>
                     </button>
 
@@ -371,15 +371,19 @@
             </div>
         </section>
         <section class="contato">
-            <h3>Gostou do que viu?</h3>
-            <p>Agora é só a gente conversar e tirar sua ideia do papel.</p>
-            <button class="primary">Fale Comigo
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
-                        fill="#5C6470" />
-                </svg>
-            </button>
+            <div class="container">
+                <div class="texto">
+                    <h2 class="h2-fundo-claro"><span class="destaque">Gostou</span> do que viu?</h2>
+                    <p class="p-fundo-claro">Agora é só a gente conversar e tirar sua ideia do papel.</p>
+                </div>
+                <button class="primary">Fale Comigo
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.7604 9.44176L12.1818 10L12.7604 10.5582C13.0799 10.2499 13.0799 9.75007 12.7604 9.44176ZM11.0247 10L7.23964 13.6523C6.92012 13.9606 6.92012 14.4605 7.23964 14.7688C7.55916 15.0771 8.0772 15.0771 8.39672 14.7688L12.7604 10.5582L12.1818 10L12.7604 9.44176L8.39672 5.23123C8.0772 4.92292 7.55916 4.92292 7.23964 5.23123C6.92012 5.53954 6.92012 6.03941 7.23964 6.34772L11.0247 10Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
         </section>
     </main>
     <footer style="background: black;">
