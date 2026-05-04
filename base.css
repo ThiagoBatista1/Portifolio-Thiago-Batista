@@ -9,7 +9,7 @@ body{
     background-image: url(assets/background_hero.png);
     width: 100%;
     margin: 0 auto;
-    padding:80px 0px;
+    padding:160px 0px 80px 0px;
 }
 .container{
     max-width: 1440px;
@@ -23,14 +23,14 @@ body{
 .inicio .texto, .contato .texto{
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 48px;
     align-items: center;
 }
 h1{
     color:#ffffff;
     font-size: 68px;
     font-weight: 800;
-    line-height: 88.4px;
+    line-height: 1.2;
     letter-spacing: 0%;
     text-align: center;
 }
@@ -78,6 +78,7 @@ h1{
     border: 1px solid #ffffff;
 }
 header{
+    position: fixed;
     background-color: #050505e6;
     backdrop-filter: blur(10px);
     width: 100%;
@@ -109,13 +110,13 @@ a{
     background-color: #DAE4F5;
     width: 100%;
     margin: 0 auto;
-    padding:152px 0px;
+    padding:112px 0px;
 }
 .contato h2{
     color:#2E3033;
     font-size: 42px;
     font-weight: 800;
-    line-height: 63px;
+    line-height: 1;
     letter-spacing: 0%;
     text-align: center;
 }
@@ -140,7 +141,7 @@ a{
     padding: 0 112px; 
     display: flex;
     flex-direction: row;
-    gap: 80px;   
+    gap: 72px;   
 }
 .image{
     background-color: #d9d9d9;
@@ -149,9 +150,10 @@ a{
     flex-shrink: 0;
 }
 .sobre h2{
+    margin: 0;
     font-size: 42px;
     font-weight: 800;
-    line-height: 63px;
+    line-height: 1;
     letter-spacing: 0%;
 }
 .sobre p{
@@ -164,7 +166,7 @@ a{
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    gap: 64px;  
+    gap: 48px;  
 }
 .skills{
     background-color:#DAE4F5;
@@ -178,14 +180,14 @@ a{
     padding: 0 112px; 
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    border: 2px solid red;
+    align-items: center;
+    gap: 72px;
 }
 .skills h2{
     color:#2E3033;
     font-size: 42px;
     font-weight: 800;
-    line-height: 63px;
+    line-height: 1.2;
     letter-spacing: 0%;
 }
 .skills p{
@@ -200,12 +202,13 @@ a{
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 48px;
     align-items: center;
 }
 .ferramentas{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 48px;
 }
 .skill_box{
@@ -215,6 +218,7 @@ a{
     align-items: center;
     background-color:#17181A;
     border-radius: 24px;
+    height: 62px;
 }
 .skill_box p{
     color:#ffffff;
@@ -222,10 +226,12 @@ a{
     font-weight: 800;
     line-height: 38px;
     letter-spacing: 0;
+    white-space: nowrap;
 }
 .skill_box svg{
     color:#17181A;
     height: 16px;
+    width: auto;
 }
 .box_icone{
     width: 24px;
@@ -235,4 +241,95 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.formacaoAcademica{
+    background-color: #0068FF;
+    border-radius: 24px;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 380px;
+}
+.formacaoAcademica h3{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0%;
+}
+.formacaoAcademica ul{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+.formacaoAcademica li{
+    color:#ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+.formacaoComplementar{
+    background-color: #17181A;
+    border-radius: 24px;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 380px;
+}
+.formacaoComplementar h3{
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0%;
+}
+.formacaoComplementar ul{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+.formacaoComplementar li{
+    color:#ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+.header_box .box_icone{
+    width: 40px;
+    height: 40px;
+    background-color: #0068FF;
+    flex-shrink: 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_box svg{
+    color:#17181A;
+    height: 24px;
+    width: auto;
+}
+.header_box{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.carrossel{
+    display: flex;
+    gap: 40px;
+}
+.setas{
+    display: flex;
+    justify-content: space-between;
+}
+.formacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
 }
