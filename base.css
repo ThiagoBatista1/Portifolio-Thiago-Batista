@@ -95,6 +95,10 @@ header{
 }
 a{
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0%;
     color: #ffffff;
 }
 .item{
@@ -251,7 +255,7 @@ a{
     gap: 40px;
     min-width: 380px;
 }
-.formacaoAcademica h3{
+.formacaoAcademica h4{
     color: #ffffff;
     font-size: 24px;
     font-weight: 800;
@@ -279,7 +283,7 @@ a{
     gap: 40px;
     min-width: 380px;
 }
-.formacaoComplementar h3{
+.formacaoComplementar h4{
     margin: 0;
     color: #ffffff;
     font-size: 24px;
@@ -298,6 +302,25 @@ a{
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0;
+}
+.header_box1 .box_icone{
+    width: 40px;
+    height: 40px;
+    background-color: #17181A;
+    flex-shrink: 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_box1 svg{
+    height: 24px;
+    width: auto;
+}
+.header_box1{
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 .header_box .box_icone{
     width: 40px;
@@ -332,4 +355,128 @@ a{
     flex-direction: column;
     gap: 40px;
     width: 100%;
+}
+.trabalhos{
+    background-color:#0068FF;
+    width: 100%;
+    margin: 0 auto;
+    padding:80px 0px;
+}
+.trabalhos .container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 112px; 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 72px;
+}
+.trabalhos h2{
+    color:#ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0%;
+}
+.projetos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+.projetos h3{
+    color:#2E3033;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0%;
+}
+.projetos p{
+    color:#ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+.projetos .texto{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.projetos .card{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.projetos .card div{
+    background-color: #d9d9d9;
+    width: 360px;
+    height: 320px;
+    border-radius: 24px;
+}
+.projetos .card h4{
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0%;
+}
+.cardsGrupo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer{
+    background-color:#17181A;
+    width: 100%;
+    margin: 0 auto;
+    padding:80px 0px;
+}
+footer .container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 112px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
+footer .logo{
+    width: 200px;
+    height: auto;
+}
+footer .redesLogos{
+    width: 250px;
+}
+footer .redesSociais{
+    width: 100%;
+}
+footer .redesLogos ul{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+}
+footer .redesLogos ul svg{
+    height: 24px;
+    width: auto;
+}
+footer .redesSociais ul{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+}
+footer .redesSociais li{
+    width: 220px;
 }
