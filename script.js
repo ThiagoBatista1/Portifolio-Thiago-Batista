@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("modalArte");
     const titulo = overlay.querySelector(".modalTitulo");
+    const imagemFeed = overlay.querySelector(".modalImagem--feed");
+    const imagemStory = overlay.querySelector(".modalImagem--story");
     const botaoFechar = overlay.querySelector(".modalFechar");
     const botoesArte = document.querySelectorAll(".arteItem");
 
-    function abrirModal(dataTitulo) {
-        titulo.textContent = dataTitulo;
+    function abrirModal(botao) {
+        titulo.textContent = botao.dataset.titulo;
+        imagemFeed.style.backgroundImage = botao.dataset.feed ? `url('${botao.dataset.feed}')` : "";
+        imagemStory.style.backgroundImage = botao.dataset.story ? `url('${botao.dataset.story}')` : "";
+        imagemFeed.classList.toggle("modalImagem--feed-portrait", botao.dataset.feedPortrait === "true");
         overlay.classList.add("aberto");
         document.body.style.overflow = "hidden";
     }
@@ -17,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     botoesArte.forEach((botao) => {
         botao.addEventListener("click", () => {
-            abrirModal(botao.dataset.titulo);
+            abrirModal(botao);
         });
     });
 
