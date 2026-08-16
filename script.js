@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function abrirModal(botao) {
         titulo.textContent = botao.dataset.titulo;
-        imagemFeed.style.backgroundImage = botao.dataset.feed ? `url('${botao.dataset.feed}')` : "";
-        imagemStory.style.backgroundImage = botao.dataset.story ? `url('${botao.dataset.story}')` : "";
-        imagemFeed.classList.toggle("modalImagem--feed-portrait", botao.dataset.feedPortrait === "true");
+        imagemFeed.src = botao.dataset.feed || "";
+        imagemStory.src = botao.dataset.story || "";
+        imagemStory.style.display = botao.dataset.story ? "" : "none";
         overlay.classList.add("aberto");
         document.body.style.overflow = "hidden";
     }

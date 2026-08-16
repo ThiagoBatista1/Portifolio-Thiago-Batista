@@ -505,9 +505,6 @@ a{
 .arteItem:hover .arteCapa{
     transform: scale(1.03);
 }
-.arteCapa--portrait{
-    aspect-ratio: 3 / 4;
-}
 .arteItem::after{
     content: attr(data-titulo);
     position: absolute;
@@ -576,21 +573,13 @@ a{
     max-height: 80vh;
 }
 .modalImagem{
+    display: block;
     background-color: var(--neutral-300);
-    background-size: cover;
-    background-position: center;
     border-radius: 16px;
-    height: 80vh;
+    max-height: 80vh;
+    max-width: calc(100vw - 32px);
     width: auto;
-}
-.modalImagem--feed{
-    aspect-ratio: 1 / 1;
-}
-.modalImagem--feed.modalImagem--feed-portrait{
-    aspect-ratio: 3 / 4;
-}
-.modalImagem--story{
-    aspect-ratio: 9 / 16;
+    height: auto;
 }
 footer{
     background-image: url(assets/background_hero.png);
