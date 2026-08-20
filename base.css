@@ -63,6 +63,7 @@ h3{
     flex-direction: column;
     gap: 48px;
     align-items: center;
+    max-width: 700px;
 }
 h1{
     color:#ffffff;
@@ -563,6 +564,7 @@ a{
     color: var(--white);
     font-weight: 700;
     letter-spacing: 0%;
+    max-width: 320px;
 }
 .modalVersoes{
     display: flex;
@@ -580,6 +582,21 @@ a{
     max-width: calc(100vw - 32px);
     width: auto;
     height: auto;
+}
+@media (max-width: 1439px) {
+    .modalCaixa{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 90vh;
+    }
+    .modalTitulo{
+        order: -1;
+        text-align: center;
+        max-width: 600px;
+    }
+    .modalImagem{
+        max-height: min(78vh, calc(90vh - 120px));
+    }
 }
 footer{
     background-image: url(assets/background_hero.png);
@@ -783,6 +800,7 @@ footer .container{
     }
     .modalOverlay{
         padding: 16px;
+        align-items: center;
     }
     .modalCaixa{
         gap: 16px;
@@ -922,7 +940,8 @@ footer .container{
         gap: 12px;
     }
     .modalOverlay{
-        padding: 12px;
+        align-items: flex-start;
+        padding: 64px 12px 12px;
     }
     .modalCaixa{
         overflow-y: auto;
