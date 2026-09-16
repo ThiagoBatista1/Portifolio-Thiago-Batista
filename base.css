@@ -1,125 +1,145 @@
-:root{
-  --white: #FFFFFF;
-  --neutral-50: #DAE4F5;
-  --neutral-100: #CDD6E5;
-  --neutral-300: #B6BECC;
-  --neutral-500: #898F99;
-  --neutral-700: #5C6066;
-  --neutral-900: #2E3033;
+:root {
+    --white: #FFFFFF;
+    --neutral-50: #DAE4F5;
+    --neutral-100: #CDD6E5;
+    --neutral-300: #B6BECC;
+    --neutral-500: #898F99;
+    --neutral-700: #5C6066;
+    --neutral-900: #2E3033;
 
-  --secundary-500: #17181A;
-  --primary-900: #003D99;
-  --primary-500: #0068FF;
-  --primary-100: #66A4FF;
+    --secundary-500: #17181A;
+    --primary-900: #003D99;
+    --primary-500: #0068FF;
+    --primary-100: #66A4FF;
 }
-*{
-  margin: 0;
-  box-sizing: border-box;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
-body{
-  font-family: "Inter", sans-serif;
+
+body {
+    font-family: "Inter", sans-serif;
 }
-h2{
+
+h2 {
     font-size: 44px;
     line-height: 66px;
 }
-h3{
+
+h3 {
     font-size: 32px;
     line-height: 48px;
 }
-.subtitulo{
+
+.subtitulo {
     font-size: 20px;
     line-height: 30px;
 }
-.p{
+
+.p {
     font-size: 18px;
     line-height: 27px;
 }
-.p-medium{
+
+.p-medium {
     font-size: 16px;
     line-height: 24px;
 }
-.p-small{
+
+.p-small {
     font-size: 14px;
     line-height: 21px;
 }
-.inicio{
+
+.inicio {
     background-image: url(assets/background_hero.png);
     width: 100%;
     margin: 0 auto;
-    padding:280px 0px 200px 0px;
+    padding: 180px 0px 100px 0px;
 }
-.container{
+
+.container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 112px; 
+    padding: 0 112px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:72px;
+    gap: 72px;
 }
-.inicio .texto, .contato .texto{
+
+.inicio .texto,
+.contato .texto {
     display: flex;
     flex-direction: column;
     gap: 48px;
     align-items: center;
     max-width: 700px;
 }
-h1{
-    color:#ffffff;
+
+h1 {
+    color: #ffffff;
     font-size: 64px;
     font-weight: 800;
     line-height: 74px;
     letter-spacing: 0%;
     text-align: center;
 }
-.destaque{
-    color:#0068FF;
+
+.destaque {
+    color: #0068FF;
 }
-.inicio p{
+
+.inicio p {
     max-width: 678px;
-    color:#ffffff;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0;
     text-align: center;
 }
-.botoes{
+
+.botoes {
     display: flex;
     gap: 40px;
 }
-.primary{
+
+.primary {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    border:0;
+    border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:16px;
+    gap: 16px;
     padding: 16px 40px;
     border-radius: 999px;
     color: var(--neutral-50);
     background-color: var(--primary-500);
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.primary:hover{
+
+.primary:hover {
     background-color: var(--primary-900);
     transform: translateY(-4px);
 }
-header{
+
+header {
     position: fixed;
     z-index: 100;
     background-color: #050505e6;
     backdrop-filter: blur(10px);
     width: 100%;
     margin: 0 auto;
-    padding:16px 0px;
+    padding: 16px 0px;
 }
-.header{
+
+.header {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 112px;
@@ -127,22 +147,27 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.logo{
+
+.logo {
     height: 48px;
 }
-.logo svg{
+
+.logo svg {
     display: block;
     height: 100%;
     width: auto;
 }
-.logoLink{
+
+.logoLink {
     display: flex;
     transition: transform 0.2s ease;
 }
-.logoLink:hover{
+
+.logoLink:hover {
     transform: scale(1.08);
 }
-a{
+
+a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
@@ -150,23 +175,28 @@ a{
     letter-spacing: 0%;
     color: #ffffff;
 }
-.menu a{
+
+.menu a {
     transition: color 0.2s ease;
 }
-.menu a:hover{
+
+.menu a:hover {
     color: var(--primary-500);
     font-weight: 600;
 }
-.item{
+
+.item {
     padding: 16px 32px;
 }
-.menu{
+
+.menu {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.menuToggle{
+
+.menuToggle {
     display: none;
     position: relative;
     width: 40px;
@@ -177,7 +207,8 @@ a{
     padding: 0;
     cursor: pointer;
 }
-.menuToggle svg{
+
+.menuToggle svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -185,59 +216,68 @@ a{
     opacity: 1;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.menuToggle .iconFechar{
+
+.menuToggle .iconFechar {
     opacity: 0;
     transform: translate(-50%, -50%) rotate(-90deg);
 }
-.menuToggle.aberto .iconAbrir{
+
+.menuToggle.aberto .iconAbrir {
     opacity: 0;
     transform: translate(-50%, -50%) rotate(90deg);
 }
-.menuToggle.aberto .iconFechar{
+
+.menuToggle.aberto .iconFechar {
     opacity: 1;
     transform: translate(-50%, -50%) rotate(0deg);
 }
-.contato{
-    background-color: var(--primary-500);
+
+.contato {
+    background-color: var(--neutral-50);
     width: 100%;
     margin: 0 auto;
-    padding:112px 0px;
+    padding: 112px 0px;
 }
-.contato span{
-    color: var(--neutral-50);
+
+.contato span {
+    color: var(--primary-500);
 }
-.contato .container{
-    flex-direction: row;
+
+.contato .container {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 200px;
 }
-.contato .texto{
-    align-items: flex-start;
+
+.contato .texto {
+    align-items: center;
     gap: 24px;
 }
-.contato h2{
-    color:var(--secundary-500);
+
+.contato h2 {
+    color: var(--secundary-500);
     font-weight: 800;
     letter-spacing: 0%;
     text-align: left;
 }
-.contato p{
+
+.contato p {
     max-width: 678px;
-    color:var(--neutral-50);
+    color: var(--neutral-900);
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0;
     text-align: left;
 }
-.linksContato{
+
+.linksContato {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+    align-items: center;
+    gap: 64px;
 }
-.linkContato{
+
+.linkContato {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -250,113 +290,141 @@ a{
     line-height: 24px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
-.linkContato:hover{
-    background-color: var(--neutral-50);
-    color: var(--secundary-500);
+
+.linkContato:hover {
+    color: var(--neutral-50);
+    background-color: var(--primary-500);
     transform: translateY(-4px);
 }
-.linkContato svg{
+
+.linkContato:hover svg {
+    color: var(--neutral-50);
+}
+
+.linkContato svg {
     color: var(--primary-500);
-    height: 20px;
-    width: auto;
+    height: auto;
+    width: 20px;
     display: block;
     transition: color 0.2s ease;
 }
-.sobre{
-    background-color:#17181A;
+
+.sobre {
+    background-color: #17181A;
     width: 100%;
     margin: 0 auto;
-    padding:80px 0px;
+    padding: 80px 0px;
 }
-.sobre .container{
+
+.sobre .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 112px; 
+    padding: 0 112px;
     display: flex;
     flex-direction: row;
-    gap: 72px;   
+    gap: 72px;
 }
-.image{
+
+.image {
     width: 464px;
     flex-shrink: 0;
     align-self: center;
 }
-.image img{
+
+.image img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 6%;
 }
-.sobre h2{
+
+.sobre h2 {
     font-weight: 800;
     letter-spacing: 0%;
 }
-.sobre p{
+
+.sobre p {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0;
 }
-.sobre .texto{
+
+.sobre .texto {
     max-width: 600px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-.sobre .conteudo{
+
+.sobre .conteudo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 48px;
+    gap: 72px;
 }
-.sobre .ferramentas{
+
+.sobre .ferramentas {
     justify-content: flex-start;
 }
-.sobre .skill_box{
+
+.sobre .skill_box {
     background-color: var(--neutral-50);
 }
-.sobre .skill_box p{
+
+.sobre .skill_box p {
     color: var(--neutral-900);
 }
-.sobre .skill_box svg{
+
+.sobre .skill_box svg {
     color: var(--primary-500);
 }
-.ferramentas{
+
+.ferramentas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 12px;
 }
-.skill_box{
-    padding: 10px 16px;
+
+.skill_box {
+    padding: 8px 16px;
     gap: 8px;
     display: flex;
     align-items: center;
-    background-color:#17181A;
+    background-color: #17181A;
     border-radius: 16px;
     height: 44px;
+    flex: 1 1 auto;
+    min-width: fit-content;
+    justify-content: center;
+
 }
-.skill_box p{
+
+.skill_box p {
     font-size: 14px;
     font-weight: 800;
     line-height: 20px;
     letter-spacing: 0;
     white-space: nowrap;
 }
-.skill_box svg{
-    color:var(--neutral-50);
+
+.skill_box svg {
+    color: var(--neutral-50);
     height: 16px;
     width: auto;
     display: block;
 }
-.cases{
-    background-color:var(--neutral-50);
+
+.cases {
+    background-color: var(--neutral-50);
     width: 100%;
     margin: 0 auto;
-    padding:80px 0px;
+    padding: 80px 0px;
 }
-.cases .container{
+
+.cases .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 112px;
@@ -365,7 +433,8 @@ a{
     align-items: center;
     gap: 72px;
 }
-.cases .texto{
+
+.cases .texto {
     max-width: 600px;
     text-align: center;
     display: flex;
@@ -373,59 +442,68 @@ a{
     gap: 24px;
     align-items: center;
 }
-.cases h2{
-    color:var(--neutral-900);
+
+.cases h2 {
+    color: var(--neutral-900);
     font-weight: 800;
     letter-spacing: 0%;
 }
-.cases .texto p{
-    color:var(--neutral-700);
+
+.cases .texto p {
+    color: var(--neutral-700);
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0;
 }
-.cardsCases{
+
+.cardsCases {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
-.caseCard{
+
+.caseCard {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    background-color:var(--neutral-100);
+    background-color: var(--neutral-100);
     border-radius: 24px;
     padding: 32px;
 }
-.caseCard .capa{
+
+.caseCard .capa {
     background-color: var(--neutral-300);
     width: 100%;
     height: 280px;
     border-radius: 16px;
 }
-.caseCard .conteudo{
+
+.caseCard .conteudo {
     display: flex;
     flex-direction: column;
     align-items: start;
     align-self: stretch;
     gap: 24px;
 }
-.caseCard h3{
+
+.caseCard h3 {
     color: var(--neutral-900);
     font-weight: 700;
     letter-spacing: 0%;
 }
-.caseCard .conteudo p{
-    color:var(--neutral-700);
+
+.caseCard .conteudo p {
+    color: var(--neutral-700);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0;
 }
-.tags{
+
+.tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -433,7 +511,8 @@ a{
     padding: 0;
     margin: 0;
 }
-.tags li{
+
+.tags li {
     background-color: var(--neutral-50);
     color: var(--primary-500);
     font-size: 14px;
@@ -442,13 +521,15 @@ a{
     padding: 8px 16px;
     border-radius: 100px;
 }
-.design-grafico{
+
+.design-grafico {
     background-color: var(--neutral-100);
     width: 100%;
     margin: 0 auto;
     padding: 80px 0px;
 }
-.design-grafico .container{
+
+.design-grafico .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 112px;
@@ -457,7 +538,8 @@ a{
     align-items: center;
     gap: 72px;
 }
-.design-grafico .texto{
+
+.design-grafico .texto {
     max-width: 600px;
     text-align: center;
     display: flex;
@@ -465,26 +547,30 @@ a{
     gap: 24px;
     align-items: center;
 }
-.design-grafico h2{
+
+.design-grafico h2 {
     color: var(--neutral-900);
     font-weight: 800;
     letter-spacing: 0%;
 }
-.design-grafico .texto p{
+
+.design-grafico .texto p {
     color: var(--neutral-700);
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0;
 }
-.gridArtes{
+
+.gridArtes {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
     gap: 24px;
 }
-.arteItem{
+
+.arteItem {
     position: relative;
     border: 0;
     padding: 0;
@@ -494,7 +580,8 @@ a{
     border-radius: 16px;
     overflow: hidden;
 }
-.arteCapa{
+
+.arteCapa {
     background-color: var(--neutral-300);
     background-size: cover;
     background-position: center;
@@ -503,10 +590,12 @@ a{
     border-radius: 16px;
     transition: transform 0.3s ease;
 }
-.arteItem:hover .arteCapa{
+
+.arteItem:hover .arteCapa {
     transform: scale(1.03);
 }
-.arteItem::after{
+
+.arteItem::after {
     content: attr(data-titulo);
     position: absolute;
     inset: 0;
@@ -521,10 +610,12 @@ a{
     transition: opacity 0.3s ease;
     pointer-events: none;
 }
-.arteItem:hover::after{
+
+.arteItem:hover::after {
     opacity: 1;
 }
-.modalOverlay{
+
+.modalOverlay {
     display: none;
     position: fixed;
     inset: 0;
@@ -534,10 +625,12 @@ a{
     padding: 24px;
     z-index: 999;
 }
-.modalOverlay.aberto{
+
+.modalOverlay.aberto {
     display: flex;
 }
-.modalCaixa{
+
+.modalCaixa {
     max-width: 100%;
     max-height: 90vh;
     display: flex;
@@ -545,7 +638,8 @@ a{
     align-items: center;
     gap: 24px;
 }
-.modalFechar{
+
+.modalFechar {
     position: fixed;
     top: 24px;
     right: 24px;
@@ -560,13 +654,15 @@ a{
     justify-content: center;
     cursor: pointer;
 }
-.modalTitulo{
+
+.modalTitulo {
     color: var(--white);
     font-weight: 700;
     letter-spacing: 0%;
     max-width: 320px;
 }
-.modalVersoes{
+
+.modalVersoes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -574,7 +670,8 @@ a{
     gap: 40px;
     max-height: 80vh;
 }
-.modalImagem{
+
+.modalImagem {
     display: block;
     background-color: var(--neutral-300);
     border-radius: 16px;
@@ -583,28 +680,33 @@ a{
     width: auto;
     height: auto;
 }
+
 @media (max-width: 1439px) {
-    .modalCaixa{
+    .modalCaixa {
         flex-direction: column;
         flex-wrap: nowrap;
         max-height: 90vh;
     }
-    .modalTitulo{
+
+    .modalTitulo {
         order: -1;
         text-align: center;
         max-width: 600px;
     }
-    .modalImagem{
+
+    .modalImagem {
         max-height: min(78vh, calc(90vh - 120px));
     }
 }
-footer{
+
+footer {
     background-image: url(assets/background_hero.png);
     width: 100%;
     margin: 0 auto;
-    padding:40px 0px;
+    padding: 40px 0px;
 }
-footer .container{
+
+footer .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 112px;
@@ -613,28 +715,34 @@ footer .container{
     align-items: end;
     gap: 72px;
 }
-.logoFooter{
+
+.logoFooter {
     height: 32px;
 }
-.logoFooter svg{
+
+.logoFooter svg {
     display: block;
     height: 100%;
     width: auto;
 }
-.footerWordmark{
+
+.footerWordmark {
     color: var(--white);
     font-size: 32px;
     letter-spacing: 0.5em;
     line-height: 1;
 }
-.footerWordmark .light{
+
+.footerWordmark .light {
     font-weight: 300;
 }
-.footerWordmark .semibold{
+
+.footerWordmark .semibold {
     font-weight: 600;
 }
 
 @media (max-width: 1023px) {
+
     .container,
     .header,
     .sobre .container,
@@ -644,25 +752,30 @@ footer .container{
         padding: 0 24px;
     }
 
-    .sobre .container{
+    .sobre .container {
         flex-direction: column;
         align-items: center;
     }
-    .skill_box p{
+
+    .skill_box p {
         font-size: 16px;
     }
-    .sobre .conteudo{
+
+    .sobre .conteudo {
         order: 1;
         align-items: center;
     }
-    .sobre .texto{
+
+    .sobre .texto {
         align-items: center;
         text-align: center;
     }
-    .sobre .ferramentas{
+
+    .sobre .ferramentas {
         justify-content: center;
     }
-    .image{
+
+    .image {
         order: 2;
         width: 100%;
         max-width: 464px;
@@ -670,30 +783,36 @@ footer .container{
         align-self: center;
     }
 
-    .contato .container{
+    .contato .container {
         flex-direction: column;
         align-items: center;
     }
-    .contato .texto{
-        align-items: center;
-    }
-    .contato h2{
-        text-align: center;
-    }
-    .contato p{
-        text-align: center;
-    }
-    .linksContato{
+
+    .contato .texto {
         align-items: center;
     }
 
-    .header{
+    .contato h2 {
+        text-align: center;
+    }
+
+    .contato p {
+        text-align: center;
+    }
+
+    .linksContato {
+        align-items: center;
+    }
+
+    .header {
         position: relative;
     }
-    .menuToggle{
+
+    .menuToggle {
         display: flex;
     }
-    nav{
+
+    nav {
         position: absolute;
         top: 100%;
         left: 0;
@@ -704,117 +823,147 @@ footer .container{
         backdrop-filter: blur(10px);
         transition: max-height 0.3s ease;
     }
-    nav.aberto{
+
+    nav.aberto {
         max-height: 400px;
     }
-    .menu{
+
+    .menu {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 8px 24px 24px;
     }
-    .item{
+
+    .item {
         padding: 12px 0;
     }
 
-    .footerWordmark{
+    .footerWordmark {
         font-size: 26px;
     }
 
-    h1{
+    h1 {
         font-size: 48px;
         line-height: 62px;
     }
-    h2{
+
+    h2 {
         font-size: 36px;
         line-height: 54px;
     }
-    h3{
+
+    h3 {
         font-size: 26px;
         line-height: 39px;
     }
+
     .subtitulo,
     .contato p,
     .sobre p,
     .cases .texto p,
-    .design-grafico .texto p{
+    .design-grafico .texto p {
         font-size: 19px;
         line-height: 29px;
     }
 
-    .inicio{
+    .inicio {
         padding: 200px 0px 112px 0px;
     }
+
     .container,
     .sobre .container,
     .cases .container,
     .design-grafico .container,
-    footer .container{
+    footer .container {
         align-items: center;
         gap: 48px;
     }
-    .inicio .texto, .contato .texto{
+
+    .inicio .texto,
+    .contato .texto {
         gap: 32px;
     }
-    .botoes{
+
+    .botoes {
         gap: 32px;
     }
-    .contato{
+
+    .contato {
         padding: 80px 0px;
     }
-    .contato .container{
+
+    .contato .container {
         gap: 64px;
     }
+
     .sobre,
     .cases,
     .design-grafico,
-    footer{
+    footer {
         padding: 48px 0px;
     }
+
     .sobre .texto,
-    .sobre .conteudo{
+    .sobre .conteudo {
         gap: 32px;
     }
-    .ferramentas{
+
+    .ferramentas {
         gap: 16px;
     }
+
+    .skill_box p {
+        font-size: 14px;
+    }
+
     .cases .texto,
-    .design-grafico .texto{
+    .design-grafico .texto {
         gap: 16px;
     }
-    .cardsCases{
+
+    .cardsCases {
         gap: 32px;
     }
-    .caseCard{
+
+    .caseCard {
         padding: 24px;
         gap: 24px;
     }
-    .caseCard .conteudo{
+
+    .caseCard .conteudo {
         gap: 16px;
     }
-    .gridArtes{
+
+    .gridArtes {
         gap: 16px;
     }
-    .linksContato{
+
+    .linksContato {
         gap: 16px;
     }
-    .modalOverlay{
+
+    .modalOverlay {
         padding: 16px;
         align-items: center;
     }
-    .modalCaixa{
+
+    .modalCaixa {
         gap: 16px;
     }
-    .modalFechar{
+
+    .modalFechar {
         top: 16px;
         right: 16px;
     }
-    .modalVersoes{
+
+    .modalVersoes {
         gap: 32px;
     }
 }
 
 @media (max-width: 767px) {
+
     .container,
     .header,
     .sobre .container,
@@ -824,134 +973,190 @@ footer .container{
         padding: 0 16px;
     }
 
-    .footerWordmark{
+    .footerWordmark {
         font-size: 16px;
     }
 
-    .skill_box p{
+    .skill_box p {
         font-size: 14px;
     }
 
-    .botoes{
+    .botoes {
         width: 100%;
     }
-    .botoes .primary{
-        width: 100%;
-        justify-content: space-between;
-    }
-    .caseCard .primary{
+
+    .botoes .primary {
         width: 100%;
         justify-content: space-between;
     }
 
-    h1{
+    .caseCard .primary {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    h1 {
         font-size: 36px;
         line-height: 48px;
     }
-    h2{
+
+    h2 {
         font-size: 28px;
         line-height: 40px;
     }
-    h3{
+
+    h3 {
         font-size: 22px;
         line-height: 30px;
     }
+
     .subtitulo,
     .contato p,
     .sobre p,
     .cases .texto p,
-    .design-grafico .texto p{
+    .design-grafico .texto p {
         font-size: 18px;
         line-height: 27px;
     }
-    .p{
+
+    .p {
         font-size: 16px;
         line-height: 24px;
     }
+
     .p-medium,
-    .caseCard .conteudo p{
+    .caseCard .conteudo p {
         font-size: 14px;
         line-height: 21px;
     }
-    .p-small{
+
+    .p-small {
         font-size: 13px;
         line-height: 20px;
     }
 
-    .inicio{
+    .inicio {
         padding: 112px 0px 72px 0px;
     }
+
     .container,
     .sobre .container,
     .cases .container,
     .design-grafico .container,
-    footer .container{
+    footer .container {
         align-items: center;
         gap: 32px;
     }
-    .inicio .texto, .contato .texto{
+
+    .inicio .texto,
+    .contato .texto {
         gap: 24px;
     }
-    .botoes{
+
+    .botoes {
         gap: 24px;
     }
-    .contato{
+
+    .contato {
         padding: 48px 0px;
     }
-    .contato .container{
+
+    .contato .container {
         gap: 40px;
     }
+
+    .linksContato {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .linkContato {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
     .sobre,
     .cases,
     .design-grafico,
-    footer{
+    footer {
         padding: 40px 0px;
     }
-    .sobre .texto{
+
+    .sobre .texto {
         gap: 16px;
     }
-    .sobre .conteudo{
+
+    .sobre .conteudo {
         gap: 32px;
 
     }
-    .ferramentas{
+
+    .ferramentas {
         gap: 12px;
     }
+
+    .skill_box p {
+        font-size: 14px;
+    }
+
     .cases .texto,
-    .design-grafico .texto{
+    .design-grafico .texto {
         gap: 12px;
     }
-    .cardsCases{
+
+    .cardsCases {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    .caseCard{
+
+    .caseCard {
         padding: 16px;
         gap: 16px;
     }
-    .caseCard .conteudo{
+
+    .caseCard .conteudo {
         gap: 12px;
     }
-    .gridArtes{
+
+    .gridArtes {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-    .linksContato{
+
+    .linksContato {
         gap: 12px;
     }
-    .modalOverlay{
+
+    .modalOverlay {
         align-items: flex-start;
-        padding: 64px 12px 12px;
+        padding: 64px 12px 24px;
     }
-    .modalCaixa{
+
+    .modalImagem {
+        max-height: none;
+        max-width: calc(100vw - 24px);
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .modalImagem--story {
+        max-width: 80vw;
+    }
+
+    .modalCaixa {
         overflow-y: auto;
         gap: 12px;
+        max-height: calc(100vh - 100px);
     }
-    .modalFechar{
+
+    .modalFechar {
         top: 12px;
         right: 12px;
     }
-    .modalVersoes{
+
+    .modalVersoes {
         gap: 24px;
     }
 }
