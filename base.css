@@ -274,17 +274,21 @@ a {
 .linksContato {
     display: flex;
     align-items: center;
-    gap: 64px;
+    max-width: 600px;
+    width: 100%;
+    gap: 16px;
 }
 
 .linkContato {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 16px 32px;
     border-radius: 24px;
     background-color: var(--secundary-500);
     color: var(--neutral-50);
+    width: 100%;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
