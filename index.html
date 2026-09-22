@@ -136,7 +136,8 @@
                 </div>
                 <div class="cardsCases">
                     <article class="caseCard">
-                        <div class="capa"style="background-image:url('/assets/trabalhos/quality/quality-case.png');"></div>
+                        <div class="capa" style="background-image:url('/assets/trabalhos/quality/quality-case.png');">
+                        </div>
                         <div class="conteudo">
                             <h3>Quality-Internet</h3>
                             <p>Redesign do fluxo de contratação de planos, simplificando a jornada do usuário do
@@ -147,7 +148,7 @@
                                 <li>Figma</li>
                             </ul>
                         </div>
-                        <a class="primary" href="#">Ver case
+                        <a class="primary btnVerCase">Ver case
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -157,7 +158,8 @@
                         </a>
                     </article>
                     <article class="caseCard">
-                        <div class="capa" style="background-image:url('/assets/trabalhos/autonomo/immotech-case.png');"></div>
+                        <div class="capa" style="background-image:url('/assets/trabalhos/autonomo/immotech-case.png');">
+                        </div>
                         <div class="conteudo">
                             <h3>Immotech</h3>
                             <p>Plataforma de gestão imobiliária: reestruturei a navegação e os fluxos de busca e
@@ -178,6 +180,122 @@
                         </a>
                     </article>
                 </div>
+            </div>
+            <div class="modalOverlay modalCase" id="modalCase">
+                <button class="modalFechar" type="button" aria-label="Fechar">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+                <div class="modalCaseConteudo">
+
+                    <div class="modalCaseTexto">
+                        <h3 class="modalCaseTitulo">Quality-Internet</h3>
+                        <p class="modalCaseDesc">Redesign do site institucional de um provedor de internet regional, com
+                            foco em usabilidade, acessibilidade e apresentação clara dos planos e serviços.</p>
+                    </div>
+
+                    <div class="caseBloco">
+                        <div class="caseBlocoHeader">
+                            <span class="caseTamanho">Desktop</span>
+                            <button class="btnContraste" type="button" data-alvo="carrosselDesktop">Alto
+                                Contraste</button>
+                        </div>
+                        <div class="carrossel" id="carrosselDesktop">
+                            <div class="carrosselFaixa">
+                                <div class="carrosselSlide" data-nome="Home">
+                                    <img src="assets/trabalhos/quality/telas/desktop/home.png" alt="Home">
+                                    <img src="assets/trabalhos/quality/telas/desktop/home_alto-contraste.png"
+                                        alt="Home alto contraste" class="slideContraste" hidden>
+                                </div>
+                                <div class="carrosselSlide" data-nome="Sobre">
+                                    <img src="assets/trabalhos/quality/telas/desktop/sobre.png" alt="Sobre">
+                                    <img src="assets/trabalhos/quality/telas/desktop/sobre_alto-contraste.png"
+                                        alt="Sobre alto contraste" class="slideContraste" hidden>
+                                </div>
+                                <div class="carrosselSlide" data-nome="Planos">
+                                    <img src="assets/trabalhos/quality/telas/desktop/planos.png" alt="Planos">
+                                    <img src="assets/trabalhos/quality/telas/desktop/planos_alto-contraste.png"
+                                        alt="Planos alto contraste" class="slideContraste" hidden>
+                                </div>
+                            </div>
+                            <div class="carrosselInfo">
+                                <span class="carrosselNome">Home</span>
+                                <div class="carrosselPontos">
+                                    <button class="ponto ativo" data-index="0"></button>
+                                    <button class="ponto" data-index="1"></button>
+                                    <button class="ponto" data-index="2"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caseBloco">
+                        <div class="caseBlocoHeader">
+                            <span class="caseTamanho">Tablet</span>
+                            <button class="btnContraste" type="button" data-alvo="carrosselTablet">Alto
+                                contraste</button>
+                        </div>
+                        <div class="carrossel" id="carrosselTablet" data-largura="75" data-peek="true">
+                            <div class="carrosselFaixa">
+                                <div class="carrosselSlide" data-nome="Home">
+                                    <img src="assets/trabalhos/quality/telas/tablet/home.png" alt="Home">
+                                    <img src="assets/trabalhos/quality/telas/tablet/home_alto-contraste.png"
+                                        alt="Home alto contraste" class="slideContraste" hidden>
+                                </div>
+                                <div class="carrosselSlide" data-nome="Sobre">
+                                    <img src="assets/trabalhos/quality/telas/tablet/sobre.png" alt="Sobre">
+                                    <img src="assets/trabalhos/quality/telas/tablet/sobre_alto-contraste.png"
+                                        alt="Sobre alto contraste" class="slideContraste" hidden>
+                                </div>
+                                <div class="carrosselSlide" data-nome="Planos">
+                                    <img src="assets/trabalhos/quality/telas/tablet/planos.png" alt="Planos">
+                                    <img src="assets/trabalhos/quality/telas/tablet/planos_alto-contraste.png"
+                                        alt="Planos alto contraste" class="slideContraste" hidden>
+                                </div>
+                            </div>
+                            <div class="carrosselInfo">
+                                <span class="carrosselNome">Home</span>
+                                <div class="carrosselPontos">
+                                    <button class="ponto ativo" data-index="0"></button>
+                                    <button class="ponto" data-index="1"></button>
+                                    <button class="ponto" data-index="2"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="caseBloco">
+                            <div class="caseBlocoHeader">
+                                <span class="caseTamanho">Mobile</span>
+                                <button class="btnContraste" type="button" data-alvo="mobileTelas">Alto
+                                    contraste</button>
+                            </div>
+                            <div class="mobileTelas" id="mobileTelas">
+                                <div class="mobileTela">
+                                    <img src="assets/trabalhos/quality/telas/mobile/home.png" alt="Home" class="slideNormal">
+                                    <img src="assets/trabalhos/quality/telas/mobile/home_alto-contraste.png" alt="Home alto contraste"
+                                        class="slideContraste" hidden>
+                                    <span>Home</span>
+                                </div>
+                                <div class="mobileTela">
+                                    <img src="assets/trabalhos/quality/telas/mobile/sobre.png" alt="Sobre" class="slideNormal">
+                                    <img src="assets/trabalhos/quality/telas/mobile/sobre_alto-contraste.png"
+                                        alt="Sobre alto contraste" class="slideContraste" hidden>
+                                    <span>Sobre</span>
+                                </div>
+                                <div class="mobileTela">
+                                    <img src="assets/trabalhos/quality/telas/mobile/planos.png" alt="Planos" class="slideNormal">
+                                    <img src="assets/trabalhos/quality/telas/mobile/planos_alto-contraste.png"
+                                        alt="Planos alto contraste" class="slideContraste" hidden>
+                                    <span>Planos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
         <section class="design-grafico" id="design-grafico">
@@ -459,7 +577,7 @@
                         <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21.6 0H2.4C1.08 0 0.012 1.06875 0.012 2.375L0 16.625C0 17.9313 1.08 19 2.4 19H21.6C22.92 19 24 17.9313 24 16.625V2.375C24 1.06875 22.92 0 21.6 0ZM21.12 5.04688L12.636 10.2956C12.252 10.5331 11.748 10.5331 11.364 10.2956L2.88 5.04688C2.75967 4.98003 2.6543 4.88972 2.57027 4.78141C2.48623 4.67311 2.42527 4.54905 2.39109 4.41675C2.35691 4.28446 2.3502 4.14667 2.37139 4.01174C2.39257 3.87681 2.4412 3.74753 2.51434 3.63173C2.58747 3.51594 2.68359 3.41603 2.79687 3.33806C2.91015 3.26008 3.03825 3.20567 3.17339 3.1781C3.30854 3.15054 3.44794 3.1504 3.58315 3.17769C3.71835 3.20498 3.84656 3.25913 3.96 3.33687L12 8.3125L20.04 3.33687C20.1534 3.25913 20.2816 3.20498 20.4169 3.17769C20.5521 3.1504 20.6915 3.15054 20.8266 3.1781C20.9618 3.20567 21.0898 3.26008 21.2031 3.33806C21.3164 3.41603 21.4125 3.51594 21.4857 3.63173C21.5588 3.74753 21.6074 3.87681 21.6286 4.01174C21.6498 4.14667 21.6431 4.28446 21.6089 4.41675C21.5747 4.54905 21.5138 4.67311 21.4297 4.78141C21.3457 4.88972 21.2403 4.98003 21.12 5.04688Z"
-                                fill="currentColor"/>
+                                fill="currentColor" />
                         </svg>
                         Email
                     </a>
