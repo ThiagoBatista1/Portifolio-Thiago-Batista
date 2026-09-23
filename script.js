@@ -58,87 +58,96 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", fecharMenu);
     });
-});
-const modalCase = document.getElementById("modalCase");
-const botaoFecharCase = modalCase.querySelector(".modalFechar");
+    const modalCase = document.getElementById("modalCase");
+    const botaoFecharCase = modalCase.querySelector(".modalFechar");
 
-function abrirModalCase() {
-    modalCase.classList.add("aberto");
-    document.body.style.overflow = "hidden";
-}
-
-function fecharModalCase() {
-    modalCase.classList.remove("aberto");
-    document.body.style.overflow = "";
-}
-
-document.querySelectorAll(".btnVerCase").forEach((botao) => {
-    botao.addEventListener("click", abrirModalCase);
-});
-
-botaoFecharCase.addEventListener("click", fecharModalCase);
-
-modalCase.addEventListener("click", (evento) =>{
-    if (evento.target === modalCase) {
-        fecharModalCase();
+    function abrirModalCase() {
+        modalCase.classList.add("aberto");
+        document.body.style.overflow = "hidden";
     }
-});
 
-function iniciarCarrossel(carrossel) {
-    const faixa = carrossel.querySelector(".carrosselFaixa");
-    const pontos = carrossel.querySelectorAll(".ponto");
-    const nome = carrossel.querySelector(".carrosselNome");
-    const slides = carrossel.querySelectorAll(".carrosselSlide");
-    const largura = Number(carrossel.dataset.largura) || 100;
-    const temPeek = carrossel.dataset.peek === "true";
-    let indexAtual = 0;
+    function fecharModalCase() {
+        modalCase.classList.remove("aberto");
+        document.body.style.overflow = "";
+    }
 
-    function irPara(index) {
-    indexAtual = index;
-    if (temPeek) {
-        const slideWidth = slides[0].offsetWidth;
-        const gap = 16;
-        const containerWidth = carrossel.offsetWidth;
-        
-        if (index === 0) {
-            faixa.style.transform = `translateX(0px)`;
-        } else if (index === slides.length - 1) {
-            const totalWidth = slides.length * (slideWidth + gap) - gap;
-            faixa.style.transform = `translateX(-${totalWidth - containerWidth}px)`;
-        } else {
-            const offset = index * (slideWidth + gap) - (containerWidth - slideWidth) / 2;
-            faixa.style.transform = `translateX(-${offset}px)`;
+    document.querySelectorAll(".btnVerCase").forEach((botao) => {
+        botao.addEventListener("click", abrirModalCase);
+    });
+
+    botaoFecharCase.addEventListener("click", fecharModalCase);
+
+    modalCase.addEventListener("click", (evento) => {
+        if (evento.target === modalCase) {
+            fecharModalCase();
         }
-        
-        pontos.forEach((p, i) => p.classList.toggle("ativo", i === index));
-        nome.textContent = slides[index].dataset.nome;
-    } else {
-        faixa.style.transform = `translateX(-${index * largura}%)`;
-        pontos.forEach((p, i) => p.classList.toggle("ativo", i === index));
-        nome.textContent = slides[index].dataset.nome;
-    }
-}
+    });
 
-    pontos.forEach((ponto) =>{
-        ponto.addEventListener("click", () =>{
-            irPara(Number(ponto.dataset.index));
+    function iniciarCarrossel(carrossel) {
+        const faixa = carrossel.querySelector(".carrosselFaixa");
+        const pontos = carrossel.querySelectorAll(".ponto");
+        const nome = carrossel.querySelector(".carrosselNome");
+        const slides = carrossel.querySelectorAll(".carrosselSlide");
+        const largura = Number(carrossel.dataset.largura) || 100;
+        const temPeek = carrossel.dataset.peek === "true";
+        let indexAtual = 0;
+
+        function irPara(index) {
+            indexAtual = index;
+            if (temPeek) {
+                const slideWidth = slides[0].offsetWidth;
+                const gap = parseFloat(getComputedStyle(faixa).gap) || 0;
+                const viewportWidth = carrossel.offsetWidth;
+                const posicaoSlide = index * (slideWidth + gap);
+
+                let deslocamento;
+                
+                if (index === 0) {
+                    deslocamento = 0;
+                } else if (index === slides.length - 1) {
+                    deslocamento = posicaoSlide + slideWidth - viewportWidth;
+                } else {
+                    deslocamento = posicaoSlide - (viewportWidth - slideWidth) / 2;
+                }
+
+                faixa.style.transform = `translateX(-${deslocamento}px)`;
+            } else {
+                faixa.style.transform = `translateX(-${index * largura}%)`;
+            }
+            pontos.forEach((p, i) => p.classList.toggle("ativo", i === index));
+            nome.textContent = slides[index].dataset.nome;
+        }
+
+        pontos.forEach((ponto) => {
+            ponto.addEventListener("click", () => {
+                irPara(Number(ponto.dataset.index));
+            });
+        });
+    }
+
+    document.querySelectorAll(".carrossel").forEach(iniciarCarrossel);
+
+    document.querySelectorAll(".btnContraste").forEach((botao) => {
+        botao.addEventListener("click", () => {
+            const alvo = document.getElementById(botao.dataset.alvo);
+            const ativo = botao.classList.toggle("ativo");
+
+            alvo.querySelectorAll(".slideContraste").forEach((img) => {
+                img.hidden = !ativo;
+            });
+
+            alvo.querySelectorAll("img:not(.slideContraste)").forEach((img) => {
+                img.hidden = ativo;
+            });
         });
     });
-}
-
-document.querySelectorAll(".carrossel").forEach(iniciarCarrossel);
-
-document.querySelectorAll(".btnContraste").forEach((botao) => {
-    botao.addEventListener("click", () => {
-        const alvo = document.getElementById(botao.dataset.alvo);
-        const ativo = botao.classList.toggle("ativo");
-
-        alvo.querySelectorAll(".slideContraste").forEach((img) =>{
-            img.hidden = !ativo;
-        });
-
-        alvo.querySelectorAll("img:not(.slideContraste)").forEach((img) => {
-            img.hidden = ativo;
+    window.addEventListener('resize', function () {
+        console.log('largura da janela:', window.innerWidth);
+        document.querySelectorAll('.carrossel').forEach(function (carrossel) {
+            const pontoAtivo = carrossel.querySelector('.ponto.ativo');
+            if (pontoAtivo) {
+                pontoAtivo.click();
+            }
         });
     });
 });

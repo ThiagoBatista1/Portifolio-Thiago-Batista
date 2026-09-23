@@ -136,7 +136,7 @@
                 </div>
                 <div class="cardsCases">
                     <article class="caseCard">
-                        <div class="capa" style="background-image:url('/assets/trabalhos/quality/quality-case.png');">
+                        <div class="capa" style="background-image:url('assets/trabalhos/quality/quality-case.png');">
                         </div>
                         <div class="conteudo">
                             <h3>Quality-Internet</h3>
@@ -158,7 +158,7 @@
                         </a>
                     </article>
                     <article class="caseCard">
-                        <div class="capa" style="background-image:url('/assets/trabalhos/autonomo/immotech-case.png');">
+                        <div class="capa" style="background-image:url('assets/trabalhos/autonomo/immotech-case.png');">
                         </div>
                         <div class="conteudo">
                             <h3>Immotech</h3>
@@ -265,31 +265,36 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="caseBloco">
-                            <div class="caseBlocoHeader">
-                                <span class="caseTamanho">Mobile</span>
-                                <button class="btnContraste" type="button" data-alvo="mobileTelas">Alto
-                                    contraste</button>
-                            </div>
-                            <div class="mobileTelas" id="mobileTelas">
-                                <div class="mobileTela">
-                                    <img src="assets/trabalhos/quality/telas/mobile/home.png" alt="Home" class="slideNormal">
-                                    <img src="assets/trabalhos/quality/telas/mobile/home_alto-contraste.png" alt="Home alto contraste"
-                                        class="slideContraste" hidden>
-                                    <span>Home</span>
+                    <div class="caseBloco">
+                        <div class="caseBlocoHeader">
+                            <span class="caseTamanho">Mobile</span>
+                            <button class="btnContraste" type="button" data-alvo="carrosselMobile">Alto
+                                contraste</button>
+                        </div>
+                        <div class="carrossel" id="carrosselMobile">
+                            <div class="carrosselFaixa">
+                                <div class="carrosselSlide" data-nome="Home">
+                                    <img src="assets/trabalhos/quality/telas/mobile/home.png" alt="Home">
+                                    <img src="assets/trabalhos/quality/telas/mobile/home_alto-contraste.png"
+                                        alt="Home alto contraste" class="slideContraste" hidden>
                                 </div>
-                                <div class="mobileTela">
-                                    <img src="assets/trabalhos/quality/telas/mobile/sobre.png" alt="Sobre" class="slideNormal">
+                                <div class="carrosselSlide" data-nome="Sobre">
+                                    <img src="assets/trabalhos/quality/telas/mobile/sobre.png" alt="Sobre">
                                     <img src="assets/trabalhos/quality/telas/mobile/sobre_alto-contraste.png"
                                         alt="Sobre alto contraste" class="slideContraste" hidden>
-                                    <span>Sobre</span>
                                 </div>
-                                <div class="mobileTela">
-                                    <img src="assets/trabalhos/quality/telas/mobile/planos.png" alt="Planos" class="slideNormal">
+                                <div class="carrosselSlide" data-nome="Planos">
+                                    <img src="assets/trabalhos/quality/telas/mobile/planos.png" alt="Planos">
                                     <img src="assets/trabalhos/quality/telas/mobile/planos_alto-contraste.png"
                                         alt="Planos alto contraste" class="slideContraste" hidden>
-                                    <span>Planos</span>
+                                </div>
+                            </div>
+                            <div class="carrosselInfo">
+                                <span class="carrosselNome">Home</span>
+                                <div class="carrosselPontos">
+                                    <button class="ponto ativo" data-index="0"></button>
+                                    <button class="ponto" data-index="1"></button>
+                                    <button class="ponto" data-index="2"></button>
                                 </div>
                             </div>
                         </div>
