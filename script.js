@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const posicaoSlide = index * (slideWidth + gap);
 
                 let deslocamento;
-                
+
                 if (index === 0) {
                     deslocamento = 0;
                 } else if (index === slides.length - 1) {
@@ -123,6 +123,79 @@ document.addEventListener("DOMContentLoaded", () => {
                 irPara(Number(ponto.dataset.index));
             });
         });
+
+        let arrastando = false;
+        let posicaoInicialX = 0;
+        let deslocamentoAtual = 0;
+        let ultimaPosicaoX = 0;
+
+        faixa.addEventListener('pointerdown', function (event) {
+            if (window.innerWidth > 1023) return;
+
+            event.preventDefault();
+
+            arrastando = true;
+            posicaoInicialX = event.clientX;
+            ultimaPosicaoX = event.clientX;
+            faixa.style.transition = 'none';
+            faixa.setPointerCapture(event.pointerId);
+
+            const estiloAtual = getComputedStyle(faixa).transform;
+            const matriz = new DOMMatrixReadOnly(estiloAtual);
+            deslocamentoAtual = matriz.m41
+        });
+
+        faixa.addEventListener('pointermove', function (event) {
+            if (!arrastando) return;
+
+            ultimaPosicaoX = event.clientX;
+
+            const deltaX = event.clientX - posicaoInicialX;
+            faixa.style.transform = `translateX(${deslocamentoAtual + deltaX}px)`;
+        });
+
+        /*faixa.addEventListener('pointerup', function (event) {
+            if (!arrastando) return;
+            arrastando = false;
+            faixa.style.transition = '';
+
+            const deltaX = event.clientX - posicaoInicialX;
+            const limite = faixa.offsetWidth * 0.15;
+
+            if (deltaX < -limite && indexAtual < slides.length - 1) {
+                irPara(indexAtual + 1);
+            } else if (deltaX > limite && indexAtual > 0) {
+                irPara(indexAtual - 1);
+            } else {
+                irPara(indexAtual);
+            }
+        });*/
+        function finalizarArraste(event) {
+            if (!arrastando) return;
+            arrastando = false;
+            faixa.style.transition = '';
+
+            const deltaX = ultimaPosicaoX - posicaoInicialX;
+            const limite = faixa.offsetWidth * 0.15;
+
+            if (deltaX < -limite && indexAtual < slides.length - 1) {
+                irPara(indexAtual + 1);
+            } else if (deltaX > limite && indexAtual > 0) {
+                irPara(indexAtual - 1);
+            } else {
+                irPara(indexAtual);
+            }
+        }
+
+        /*function cancelarArraste() {
+            if (!arrastando) return;
+            arrastando = false;
+            faixa.style.transition = '';
+            irPara(indexAtual);
+        }*/
+
+        faixa.addEventListener('pointerup', finalizarArraste);
+        faixa.addEventListener('pointercancel', finalizarArraste);
     }
 
     document.querySelectorAll(".carrossel").forEach(iniciarCarrossel);
@@ -142,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     window.addEventListener('resize', function () {
-        console.log('largura da janela:', window.innerWidth);
         document.querySelectorAll('.carrossel').forEach(function (carrossel) {
             const pontoAtivo = carrossel.querySelector('.ponto.ativo');
             if (pontoAtivo) {

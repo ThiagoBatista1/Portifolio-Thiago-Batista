@@ -784,6 +784,7 @@ a {
 .carrosselFaixa {
     display: flex;
     transition: transform 0.3s ease;
+    touch-action: pan-y;
 }
 
 .carrosselSlide {
@@ -827,6 +828,9 @@ a {
     height: auto;
     display: block;
     border-radius: 12px;
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 #carrosselTablet .carrosselSlide {
