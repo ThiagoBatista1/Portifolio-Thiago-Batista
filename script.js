@@ -154,23 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             faixa.style.transform = `translateX(${deslocamentoAtual + deltaX}px)`;
         });
 
-        /*faixa.addEventListener('pointerup', function (event) {
-            if (!arrastando) return;
-            arrastando = false;
-            faixa.style.transition = '';
-
-            const deltaX = event.clientX - posicaoInicialX;
-            const limite = faixa.offsetWidth * 0.15;
-
-            if (deltaX < -limite && indexAtual < slides.length - 1) {
-                irPara(indexAtual + 1);
-            } else if (deltaX > limite && indexAtual > 0) {
-                irPara(indexAtual - 1);
-            } else {
-                irPara(indexAtual);
-            }
-        });*/
-        function finalizarArraste(event) {
+        function finalizarArraste() {
             if (!arrastando) return;
             arrastando = false;
             faixa.style.transition = '';
@@ -186,13 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 irPara(indexAtual);
             }
         }
-
-        /*function cancelarArraste() {
-            if (!arrastando) return;
-            arrastando = false;
-            faixa.style.transition = '';
-            irPara(indexAtual);
-        }*/
 
         faixa.addEventListener('pointerup', finalizarArraste);
         faixa.addEventListener('pointercancel', finalizarArraste);

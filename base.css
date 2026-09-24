@@ -510,25 +510,6 @@ a {
     letter-spacing: 0;
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.tags li {
-    background-color: var(--neutral-50);
-    color: var(--primary-500);
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    padding: 8px 16px;
-    border-radius: 100px;
-}
-
 .design-grafico {
     background-color: var(--neutral-100);
     width: 100%;
@@ -626,20 +607,25 @@ a {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(23, 24, 26, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     align-items: center;
     justify-content: center;
     padding: 24px;
     z-index: 999;
+    overflow-y: auto;
 }
 
 .modalOverlay.aberto {
     display: flex;
 }
 
+.modalConteudo{
+    background-color: var(--secundary-500);
+    padding: 48px;
+    border-radius: 24px;
+}
 .modalCaixa {
     max-width: 100%;
-    max-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -675,7 +661,6 @@ a {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    max-height: 80vh;
 }
 
 .modalImagem {
@@ -899,7 +884,6 @@ a {
     .modalCaixa {
         flex-direction: column;
         flex-wrap: nowrap;
-        max-height: 90vh;
     }
 
     .modalTitulo {
@@ -938,21 +922,6 @@ footer .container {
     display: block;
     height: 100%;
     width: auto;
-}
-
-.footerWordmark {
-    color: var(--white);
-    font-size: 32px;
-    letter-spacing: 0.5em;
-    line-height: 1;
-}
-
-.footerWordmark .light {
-    font-weight: 300;
-}
-
-.footerWordmark .semibold {
-    font-weight: 600;
 }
 
 @media (max-width: 1023px) {
@@ -1051,10 +1020,6 @@ footer .container {
 
     .item {
         padding: 12px 0;
-    }
-
-    .footerWordmark {
-        font-size: 26px;
     }
 
     h1 {
@@ -1166,8 +1131,8 @@ footer .container {
         align-items: center;
     }
 
-    .modalCaixa {
-        gap: 16px;
+    .modalConteudo{
+        padding: 40px;
     }
 
     .modalFechar {
@@ -1214,10 +1179,6 @@ footer .container {
     .design-grafico .container,
     footer .container {
         padding: 0 16px;
-    }
-
-    .footerWordmark {
-        font-size: 16px;
     }
 
     .skill_box p {
@@ -1389,9 +1350,10 @@ footer .container {
     }
 
     .modalCaixa {
-        overflow-y: auto;
-        gap: 12px;
-        max-height: calc(100vh - 100px);
+        max-width: 100%;
+    }
+    .modalConteudo{
+        padding: 32px 16px;
     }
 
     .modalFechar {
