@@ -788,6 +788,7 @@ a {
 }
 
 .carrosselSlide {
+     touch-action: pan-y;
     min-width: 100%;
     position: relative;
     overflow-y: auto;
@@ -1420,7 +1421,7 @@ footer .container {
     }
 
     .modalCaseConteudo {
-        padding: 16px;
+        padding: 40px 16px;
     }
 
     #carrosselMobile {
