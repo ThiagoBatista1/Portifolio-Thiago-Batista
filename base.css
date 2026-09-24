@@ -646,6 +646,7 @@ a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .modalTitulo {
@@ -878,6 +879,16 @@ a {
     font-weight: 600;
     text-align: center;
     margin-top: 8px;
+}
+
+#carrosselImmotech .carrosselSlide {
+    max-height: 90vh;
+}
+
+#carrosselImmotech .carrosselSlide img {
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
 }
 
 @media (max-width: 1439px) {

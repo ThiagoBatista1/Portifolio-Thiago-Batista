@@ -58,30 +58,35 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", fecharMenu);
     });
-    const modalCase = document.getElementById("modalCase");
-    const botaoFecharCase = modalCase.querySelector(".modalFechar");
+    function configurarModalCase(idModal, classeBotaoAbrir) {
+        const modal = document.getElementById(idModal);
+        const botaoFechar = modal.querySelector(".modalFechar");
 
-    function abrirModalCase() {
-        modalCase.classList.add("aberto");
-        document.body.style.overflow = "hidden";
-    }
-
-    function fecharModalCase() {
-        modalCase.classList.remove("aberto");
-        document.body.style.overflow = "";
-    }
-
-    document.querySelectorAll(".btnVerCase").forEach((botao) => {
-        botao.addEventListener("click", abrirModalCase);
-    });
-
-    botaoFecharCase.addEventListener("click", fecharModalCase);
-
-    modalCase.addEventListener("click", (evento) => {
-        if (evento.target === modalCase) {
-            fecharModalCase();
+        function abrir() {
+            modal.classList.add("aberto");
+            document.body.style.overflow = "hidden";
         }
-    });
+
+        function fechar() {
+            modal.classList.remove("aberto");
+            document.body.style.overflow = "";
+        }
+
+        document.querySelectorAll("." + classeBotaoAbrir).forEach((botao) => {
+            botao.addEventListener("click", abrir);
+        });
+
+        botaoFechar.addEventListener("click", fechar);
+
+        modal.addEventListener("click", (evento) => {
+            if (evento.target === modal) {
+                fechar();
+            }
+        });
+    }
+
+    configurarModalCase("modalCase", "btnVerCase");
+    configurarModalCase("modalCaseImmotech", "btnVerCaseImmotech");
 
     function iniciarCarrossel(carrossel) {
         const faixa = carrossel.querySelector(".carrosselFaixa");
